@@ -137,3 +137,4 @@ GitHub.sublime-settings
 .history
 text.txt
 module_2_venv
+__init__.py
