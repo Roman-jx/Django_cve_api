@@ -40,18 +40,23 @@ p {
     border: 2px solid beige;
     border-radius: 16px;
 }
-
-/*
-    Footer
-*/
-.ftr {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.main-text{
+    text-align: center;
+    text-decoration: none;
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
   width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
 }
 
+/*td, th {*/
+/*  border: 1px solid #dddddd;*/
+/*  text-align: left;*/
+/*  padding: 8px;*/
+/*}*/
+/*tr:nth-child(even) {*/
+/*  background-color: #dddddd;*/
+/*}*/
 

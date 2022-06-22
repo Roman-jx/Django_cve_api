@@ -1,6 +1,9 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 import logging
+import datetime
+import pdfkit
+
 
 Logging = logging.getLogger('main')
 NIST_API_KEY = "5a79759a-92b1-4807-9c68-df070b8461ef"
@@ -25,4 +28,4 @@ def get_all(request):
     Logging.info("BOT")
     return render(request, "get_all.html", {"title": "All cve"})
 
-
+# def get

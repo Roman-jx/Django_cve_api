@@ -1,6 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1></h1>
+    <div class="main-text">
+        <h1><img src="{% static 'new.png' %}" width="50" height="50">&nbsp&nbspNew</h1>
+    </div>
+    <hr>
+    <div class="mid-dict3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">№</th>
+              <th scope="col">Vuln ID</th>
+              <th scope="col">Description</th>
+              <th scope="col">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 <hr>
 {% endblock %}
