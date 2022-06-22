@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-    <p>Something about home</p>
+<div class="home-list">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-warning" ><img src="{% static 'new.png' %}" width="50" height="50">&nbsp&nbsp<a href="{% url 'get_new' %}">New cve</a></li>
+        <li class="list-group-item list-group-item-danger"><img src="{% static 'critical.png' %}" width="50" height="50">&nbsp&nbsp<a href="{% url 'get_critical' %}">Сritical cve</a></li>
+        <li class="list-group-item list-group-item-info"><img src="{% static 'all.png' %}" width="50" height="50">&nbsp&nbsp<a href="{% url 'get_all' %}">All cve</a></li>
+    </ul>
+</div>
+<hr>
 {% endblock %}
