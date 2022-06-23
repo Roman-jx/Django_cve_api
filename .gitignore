@@ -138,3 +138,4 @@ GitHub.sublime-settings
 text.txt
 module_2_venv
 __init__.py
+Django_cve_api/cve.json

@@ -18,12 +18,16 @@
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>{{ cve }}</td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
+    </div>
+    <hr>
+    <div class="d1">
+        <h6><a href="{% url 'get_critical_pdf' %}"><img src="{% static 'pdf.png' %}" width="30" height="30"></a>Download PDF</h6>
     </div>
 <hr>
 {% endblock %}

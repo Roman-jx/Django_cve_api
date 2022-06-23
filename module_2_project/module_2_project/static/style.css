@@ -50,13 +50,18 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
-/*td, th {*/
-/*  border: 1px solid #dddddd;*/
-/*  text-align: left;*/
-/*  padding: 8px;*/
-/*}*/
-/*tr:nth-child(even) {*/
-/*  background-color: #dddddd;*/
-/*}*/
+.d1{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.mid-dict3 .table {
+    text-align: center;
+    text-decoration: none;
+}
+.mid-dict3 .table thead tr th{
+    background: grey;
+    border: 2px solid black;
+    padding-bottom: 30px;
+}
 

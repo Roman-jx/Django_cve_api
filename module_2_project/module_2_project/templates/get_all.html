@@ -5,25 +5,52 @@
         <h1><img src="{% static 'all.png' %}" width="50" height="50">&nbsp&nbspAll</h1>
     </div>
     <hr>
-    <div class="mid-dict1">
-        <table class="table">
+    <div class="mid-dict3">
+        <table class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th scope="col">№</th>
               <th scope="col">Vuln ID</th>
               <th scope="col">Description</th>
               <th scope="col">Score</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
+          {% for i in cves %}
+            {% if i.score < 5 %}
+                <tr>
+                  <th>{{ i.vuln |upper }}</th>
+                  <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;'>{{ i.description }}</td>
+                  <td style='background: green;font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
+                </tr>
+            {% endif %}
+            {% if i.score > 5 %}
+                   <tr>
+                      <th>{{ i.vuln |upper }}</th>
+                      <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>{{ i.description }}</td>
+                      <td style='background: yellow;font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
+                  </tr>
+            {% endif %}
+            {% if i.score > 7 %}
+                    <tr>
+                      <th>{{ i.vuln |upper }}</th>
+                      <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>{{ i.description }}</td>
+                      <td style='background: orange;font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
+                    </tr>
+              {% endif %}
+              {% if i.score > 9 %}
+                    <tr>
+                      <th>{{ i.vuln |upper }}</th>
+                      <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>{{ i.description }}</td>
+                      <td style='background: red; font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
+                    </tr>
+              {% endif %}
+          {% endfor %}
           </tbody>
         </table>
+    </div>
+    <hr>
+    <div class="d1">
+        <h6><a href="{% url 'get_all_pdf' %}"><img src="{% static 'pdf.png' %}" width="30" height="30"></a>Download PDF</h6>
     </div>
 <hr>
 {% endblock %}
