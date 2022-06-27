@@ -11,15 +11,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('info/', info, name="info"),
     path('', home, name="home"),
-    path('get/new/', get_new, name="get_new"),
-    path('get/critical/', get_critical, name="get_critical"),
+    path('get/new/', Vuln3.as_view(), name="get_new"),
+    path('get/critical/', Vuln2.as_view(), name="get_critical"),
     path('get/all/', Vuln.as_view(), name="get_all"),
-    path('get/new/pdf/', get_new_pdf, name="get_new_pdf"),
-    path('get/critical/pdf/', get_critical_pdf, name="get_critical_pdf"),
-    path('get/all/pdf/', get_all_pdf, name="get_all_pdf"),
-
-    # path('get/all/cve/', get_all_content, name="get_all_content"),
-    # path('get/new/cve/', get_new_content, name="get_new_content"),
+    path('get/new/pdf/', pdf_down_3, name="get_new_pdf"),
+    path('get/critical/pdf/', pdf_down_2, name="get_critical_pdf"),
+    path('get/all/pdf/', pdf_down_1, name="get_all_pdf"),
 ]
 urlpatterns += staticfiles_urlpatterns()
 

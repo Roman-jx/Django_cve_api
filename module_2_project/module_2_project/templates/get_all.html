@@ -18,28 +18,28 @@
           {% for i in cves %}
             {% if i.score < 5 %}
                 <tr>
-                  <th>{{ i.vuln |upper }}</th>
+                  <th><a href="https://nvd.nist.gov/vuln/detail/{{ i.vuln|upper }}">{{ i.vuln|upper }}</a></th>
                   <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;'>{{ i.description }}</td>
                   <td style='background: green;font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
                 </tr>
             {% endif %}
             {% if i.score > 5 %}
                    <tr>
-                      <th>{{ i.vuln |upper }}</th>
+                      <th><a href="https://nvd.nist.gov/vuln/detail/{{ i.vuln|upper }}">{{ i.vuln|upper }}</a></th>
                       <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>{{ i.description }}</td>
                       <td style='background: yellow;font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
                   </tr>
             {% endif %}
             {% if i.score > 7 %}
                     <tr>
-                      <th>{{ i.vuln |upper }}</th>
+                      <th><a href="https://nvd.nist.gov/vuln/detail/{{ i.vuln|upper }}">{{ i.vuln|upper }}</a></th>
                       <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>{{ i.description }}</td>
                       <td style='background: orange;font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
                     </tr>
               {% endif %}
               {% if i.score > 9 %}
                     <tr>
-                      <th>{{ i.vuln |upper }}</th>
+                      <th><a href="https://nvd.nist.gov/vuln/detail/{{ i.vuln|upper }}">{{ i.vuln|upper }}</a></th>
                       <td style='font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>{{ i.description }}</td>
                       <td style='background: red; font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;'>{{ i.score }}</td>
                     </tr>

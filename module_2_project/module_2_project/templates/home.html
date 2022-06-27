@@ -1,6 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<hr>
+<table class="table table-hover table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Status</th>
+      <th scope="col">Color</th>
+      <th scope="col">Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style='text-align: center; font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>Normally</td>
+      <td style="background: yellow;"></td>
+      <td style="text-align: center;">5 - 7</td>
+    </tr>
+    <tr>
+      <td style='text-align: center; font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>Average</td>
+      <td style="background: orange;"></td>
+      <td style="text-align: center;">7 - 9</td>
+    </tr>
+    <tr>
+      <td style='text-align: center; font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif'>Critical</td>
+      <td style="background: red;"></td>
+      <td style="text-align: center;">9 - 10</td>
+    </tr>
+  </tbody>
+</table>
 <div class="home-list">
     <ul class="list-group list-group-flush">
         <li class="list-group-item list-group-item-warning" ><img src="{% static 'new.png' %}" width="50" height="50">&nbsp&nbsp<a href="{% url 'get_new' %}">New cve</a></li>
