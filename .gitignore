@@ -139,3 +139,5 @@ text.txt
 module_2_venv
 __init__.py
 Django_cve_api/cve.json
+db_backup.sqlite3
+.idea
